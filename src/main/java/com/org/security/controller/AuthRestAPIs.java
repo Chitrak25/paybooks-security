@@ -166,6 +166,9 @@ public class AuthRestAPIs {
 		emailRequestDto.setSubject(email.getSubject());
 		emailRequestDto.setFrom("paybooksnoreply@gmail.com");
 
+		System.out.println(emailRequestDto.getEmail()+"**************************");
+		System.out.println(emailRequestDto.getBody()+"**************************");
+		
 		HttpHeaders headers = new HttpHeaders();
 		
 		headers.setBearerAuth(JwtAuthTokenFilter.jwt.toString());
