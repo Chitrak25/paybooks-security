@@ -172,7 +172,7 @@ public class AuthRestAPIs {
 		headers.setAccept(Arrays.asList(org.springframework.http.MediaType.APPLICATION_JSON));
 		HttpEntity<EmailRequestDto> entity = new HttpEntity<EmailRequestDto>(emailRequestDto, headers);
 
-		ResponseEntity<String> responseEntity = restTemplate.exchange("http://paybooksemails-env.eba-w2zypp2m.ap-south-1.elasticbeanstalk.com/",
+		ResponseEntity<String> responseEntity = restTemplate.exchange("http://paybooksemails-env.eba-w2zypp2m.ap-south-1.elasticbeanstalk.com/api/access/email",
 				HttpMethod.POST, entity, String.class);
 
 		return responseEntity.getBody();
