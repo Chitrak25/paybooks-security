@@ -175,7 +175,7 @@ public class AuthRestAPIs {
 		headers.setAccept(Arrays.asList(org.springframework.http.MediaType.APPLICATION_JSON));
 		HttpEntity<EmailRequestDto> entity = new HttpEntity<EmailRequestDto>(emailRequestDto, headers);
 
-		ResponseEntity<String> responseEntity = restTemplate.exchange("http://localhost:8082/api/access/email",
+		ResponseEntity<String> responseEntity = restTemplate.exchange("http://localhost:8083/api/access/email",
 				HttpMethod.POST, entity, String.class);
 
 		return responseEntity.getBody();
